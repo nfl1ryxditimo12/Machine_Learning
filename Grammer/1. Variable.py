@@ -1,2 +1,2 @@
 jusik = 'naver daum'
-print(jusik.split(' '))
+print(jusik.split(' '))#
