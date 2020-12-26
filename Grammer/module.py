@@ -1,4 +1,4 @@
-def module_upper(price):#
+def module_upper(price):
     increment = price * 0.3
     upper_price = price + increment
 
