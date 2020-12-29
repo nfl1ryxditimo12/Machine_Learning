@@ -9,7 +9,7 @@ print(naver_closing_price)
 print('\n==================================================\n')
 
 # 문제 2
-# 위에서 만든 naver_closing_price 를 이용해 해당 주에 종가를 기준으로 가장 낮았던 가격을 출력하세요.
+# 위에서 만든 naver_closing_price 를 이용해 해당 주에 종가를 기준으로 가장 높았던 가격을 출력하세요.
 
 print(max(naver_closing_price))
 

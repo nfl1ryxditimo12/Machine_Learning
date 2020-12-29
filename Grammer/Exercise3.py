@@ -24,7 +24,7 @@ print('\n==================================================\n')
 for i in range(5):
     for j in range(i + 1):
         print("*", end='')
-    print("")
+    print('')
 
 print('\n==================================================\n')
 
@@ -34,7 +34,7 @@ print('\n==================================================\n')
 for i in range(5):
     for j in range(5 - i):
         print("*", end='')
-    print("")
+    print('')
 
 print('\n==================================================\n')
 
@@ -43,10 +43,10 @@ print('\n==================================================\n')
 
 for i in range(5):
     for j in range(5):
-        if j >= 4 - i:
-            print('*', end='')
+        if j < 4 - i:
+            print(" ", end='')
         else:
-            print(' ', end='')
+            print("*", end='')
     print('')
 
 print('\n==================================================\n')
@@ -56,7 +56,7 @@ print('\n==================================================\n')
 
 for i in range(5):
     for j in range(5):
-        if i <= j:
+        if j >= i:
             print('*', end='')
         else:
             print(' ', end='')
@@ -69,12 +69,13 @@ print('\n==================================================\n')
 
 for i in range(5):
     for j in range(5):
-        if j >= 4 - i:
-            print('*', end='')
-        else:
+        if j < 4 - i:
             print(' ', end='')
-    for j in range(i):
-        print('*', end='')
+        else:
+            print('*', end='')
+
+    for k in range(i):
+        print("*", end='')
     print('')
 
 print('\n==================================================\n')
@@ -84,15 +85,13 @@ print('\n==================================================\n')
 
 for i in range(5):
     for j in range(5):
-        if i <= j:
+        if j >= i:
             print('*', end='')
         else:
             print(' ', end='')
-    for j in range(4 - i):
-        if j <= 4 - i:
-            print('*', end='')
-        else:
-            print(' ', end='')
+
+    for k in range(4 - i):
+        print('*', end='')
     print('')
 
 print('\n==================================================\n')
@@ -108,15 +107,13 @@ apart = [
     [401, 402, 403, 404],
 ]
 arrears = [101, 203, 301, 404]
-floor = 1
 
-for i in apart:
-    print("%d층 배달이요 : " % floor, end='')
-    for j in i:
-        if j == 101 or j == 203 or j == 301 or j == 404:
-            continue
-        print("%s호" % j, end=' ')
-    floor += 1
-    print('')
-    
+for i in range(4):
+    for j in range(4):
+        if apart[i][j] == arrears[j]:
+            del apart[i][j]
+
+print("배달 완료 :", apart)
+print("미납 세대 :", arrears)
+
 print('\n==================================================\n')

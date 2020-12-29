@@ -19,6 +19,10 @@ class Pointer:
     def get(self):
         print("현재 좌표는 x : %d, y : %d 입니다" % (self.x, self.y))
 
+        getxy = (self.x, self.y)
+
+        return getxy
+
     def move(self, dx, dy):
         print("현재 좌표에서 %d, %d 만큼 이동합니다." % (dx, dy))
         self.x += dx
